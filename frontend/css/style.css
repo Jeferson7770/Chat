@@ -14,7 +14,7 @@
 }
 
 body{
-    color: #f2f2f2;background-image: url('/frontend/images/background.jpg');
+    background-image: url('/frontend/images/background.jpg');
     background-size: cover; /* Para garantir que a imagem cubra todo o fundo */
     
 }
