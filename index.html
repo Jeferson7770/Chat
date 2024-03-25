@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro de Mensagens</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="message-board-container">
+            <div id="message-board"></div>
+        </div>
+        <div id="message-input">
+            <input type="text" id="username" placeholder="Seu nome">
+            <input type="color" id="name-color" value="#000000">
+            <input type="text" id="message" placeholder="Sua mensagem">
+            <input type="file" id="file" accept="image/*">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
