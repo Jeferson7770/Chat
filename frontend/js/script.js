@@ -102,3 +102,20 @@ const sendMessage = (event) =>{
 loginForm.addEventListener("submit", handleLogin);
 
 chatForm.addEventListener("submit", sendMessage);
+
+
+
+
+
+document.getElementById('show-terms').addEventListener('change', function() {
+    document.getElementById('login-button').disabled = !this.checked;
+});
+
+document.getElementById('show-modal').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('terms-modal').style.display = 'block';
+});
+
+document.getElementById('close-modal').addEventListener('click', function() {
+    document.getElementById('terms-modal').style.display = 'none';
+});

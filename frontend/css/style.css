@@ -14,7 +14,7 @@
 }
 
 body{
-    background-color: rgb(55, 110, 174); /* Define a cor de fundo como azul marinho */
+    background-color: rgb(187, 218, 253); /* Define a cor de fundo como azul marinho */
     color: white; /* Define a cor do texto como branco para melhor legibilidade */
     
 }
@@ -164,3 +164,66 @@ body{
     font-weight: 700;
     color: cadetblue;
 }
+
+
+
+
+
+
+
+
+
+
+
+.terms-of-use {
+    color: black; /* Definindo a cor do texto como preta */
+    display: none;
+}
+#show-terms:checked + .terms-of-use {
+    display: block;
+   
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: #121212;
+}
+.modal-content h2 {
+    text-align: center;
+    color: #121212;
+}
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+.highlight-terms {
+    color: #ff8400; /* Cor vermelha, você pode mudar para a cor desejada */
+    font-weight: bold; /* Negrito para destacar */
+}
+

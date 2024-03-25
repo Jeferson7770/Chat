@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>InteractChat</title>
 </head>
@@ -11,21 +12,43 @@
     <section class="container">
         <section class="login">
             <h2>Login</h2>
-            <form class="login__form">
-                <input type="text" class="login__input" placeholder="Seu nome" required/>
-                <button type="submit" class="login__button">Entrar</button>
+            <form class="login__form" id="login-form" method="post">
+                <label for="username">Seu nome:</label>
+                <input type="text" id="username" name="username" class="login__input" placeholder="Seu nome" required/>
+                <div id="terms-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="modal-close" id="close-modal">&times;</span>
+                        <h2>Termos de uso do InteractChat</h2> <br>
+
+
+                        <p>Este é um serviço de chat online fornecido pela InteractChat. Ao usar este serviço, você concorda com os seguintes termos:</p> <br>
+                        <ol>
+                            <li><strong>Comportamento adequado:</strong> Respeite os outros usuários do chat. Não faça bullying, assédio, insultos, discriminação ou qualquer outra forma de comportamento inadequado.</li>
+                            <li><strong>Uso responsável:</strong> Utilize este serviço de forma responsável. Não publique conteúdo ilegal, ofensivo, difamatório, prejudicial, obsceno ou enganoso.</li>
+                            <li><strong>Privacidade:</strong> Respeite a privacidade dos outros usuários. Não divulgue informações pessoais de terceiros sem consentimento.</li>
+                            <li><strong>Conteúdo gerado pelo usuário:</strong> Qualquer conteúdo que você publicar neste chat é de sua responsabilidade. A InteractChat não se responsabiliza por qualquer conteúdo gerado pelos usuários.</li>
+                            <li><strong>Moderação:</strong> A InteractChat se reserva o direito de moderar o conteúdo deste chat e remover qualquer conteúdo que viole estes termos de uso.</li>
+                        </ol>
+                        <p>Ao utilizar este serviço, você concorda em cumprir estes termos de uso. Se você não concordar com estes termos, por favor, não utilize este serviço.</p>
+
+                    </div>
+                </div>
+                <label for="show-terms" class="show-terms-label">Eu li e concordo com os <a href="#" id="show-modal" class=" highlight-terms">Termos de Uso</a></label>
+                <input type="checkbox" id="show-terms" class="show-terms" required>
+                <button type="submit" class="login__button" id="login-button" disabled>Entrar</button>
+                <div id="error-message" style="color: red;"></div> <!-- Mensagem de erro -->
             </form>
         </section>
         <section class="chat">
-           <section class="chat__messages">
-
-            <!-- <div class="message--self">Hello, World!</div>
-            <div class="message--other">
-                <span class="message--sender">Usuario</span>
-                Olá, Mundo!
-            </div> -->
-
-           </section>
+            <section class="chat__messages">
+ 
+             <!-- <div class="message--self">Hello, World!</div>
+             <div class="message--other">
+                 <span class="message--sender">Manual do Dev</span>
+                 Olá, Mundo!
+             </div> -->
+ 
+            </section>
             <form class="chat__form">
                 <input type="text" class="chat__input" placeholder="Digite uma mensagem" required/>
                 <button type="submit" class="chat__button">
